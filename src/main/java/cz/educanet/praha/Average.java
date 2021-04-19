@@ -4,21 +4,21 @@ import java.util.Scanner;
 
 public class Average {
 
-    public static double average(Scanner scanner) {
-        double sum = 0;
-        double average = 0;
-        while (scanner.hasNext()) {
-            int n = scanner.nextInt();
-            for (int i = 0; i < n; i++) {
-              sum += n;
-              average = average + sum/n;
-              }
-            }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-        return average;
+        System.out.println("Prumer je " + avg(sc));
     }
 
-    public static void main(String[] args) {
-        System.out.println(average(new Scanner(System.in)));
+    public static double avg(Scanner scnr) {
+        System.out.print("Kolik cisel: ");
+        int numbers = scnr.nextInt();
+        double s = 0;
+        for (int i = 0; i < numbers; i++) {
+            System.out.print("Zadej " + (i + 1) + ". cislo: ");
+            s = s + scnr.nextDouble();
+        }
+        double result = s / numbers;
+        return result;
     }
 }
