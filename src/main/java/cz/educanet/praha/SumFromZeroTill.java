@@ -3,19 +3,13 @@ package cz.educanet.praha;
 import java.util.Scanner;
 
 public class SumFromZeroTill {
-    public static int sumFromZeroTill(int max){
-        int sum = 0;
-        int i = 1;
-        while (i <= max){
-            sum += i;
-            i++;
-        }
-        return sum;
-    }
-
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a number:");
-        System.out.println(sumFromZeroTill(sc.nextInt()));
+       int num = 5;
+		int max = 0;
+		for (int i = 0;i<num;i++){
+			max = max + num-i;
+		}
+
+		System.out.println(max);
     }
 }
